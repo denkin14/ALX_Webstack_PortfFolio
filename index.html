@@ -175,7 +175,7 @@
                   //get the radio channels with positions first then active ones
 
                   var firstStation = null;
-                  db.collection("RadioFR").get().then((querySnapshot) => {
+                  db.collection("RadioKE").get().then((querySnapshot) => {
                       querySnapshot.forEach((doc) => {
 
                           var station_name = doc.data().station_name;
