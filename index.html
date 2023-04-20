@@ -156,10 +156,77 @@
           </div>
         </div>
       </section>
+
+       <!-- Variety of Music Genres-->
+       <section class="section section-lg">
+        <div class="container">
+          <div class="block-lg text-center">
+            <h2>Stream Kenyan Top Radio Stations</h2>
+                  <p><strong>
+                  Get a rich collection of Over 50+ French Radio Shows including Vernacular, Talk Shows, Gospel, News, Music and Sports and Entertainment.
+                   </strong></p>
+                   <p><strong>Click on any Radio Stations to Start Listening to Live Radio</strong></p>
+          </div>
+            <div id="radios_container" class="row row-20 justify-content-lg-center">
+
+              <!--Main Content , Fetch From Firebase CouldFirestore-->
+
+              <script>
+                  //get the radio channels with positions first then active ones
+
+                  var firstStation = null;
+                  db.collection("RadioFR").get().then((querySnapshot) => {
+                      querySnapshot.forEach((doc) => {
+
+                          var station_name = doc.data().station_name;
+                          var img_url = doc.data().img_url;
+                          var stream_url = doc.data().stream_url;
+                          var active = doc.data().active;
+                          var position = doc.data().position;
+
+     
+                         if(doc.data().active == 1)
+                          {
+
+                            //if(doc.data().position == 1)
+                              firstStation = doc.data();
+ 
+                      
+                             //console.log(station_name+" :"+doc.data().position+ ":"+doc.data().active);
+
+                            document.getElementById("radios_container").innerHTML += 
+                          '<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 wow fadeInLeft">'+
+                          '<a href="#player_container" class="variety-box-wrapper" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio France" width="128px" height="128px" /><h4 style="margin:10px">'+station_name+'</h4></div></figure></a></div>';
+                          
+                          if(doc.data().position == 2)
+                          launchPlayer(firstStation.station_name,firstStation.stream_url,firstStation.img_url);
+
+                        }
+                      });
+                    });
+                     
+              
+   
+                  //Launches Specific Radio when clicked 
+                  function launchPlayer(station_name,stream_url,img_url){
+
+                      document.getElementById("player_container").innerHTML='  <img height="128px" width="128px" src="'+img_url+'" style="margin: 10px"> <h3 style="margin: 10px">'+station_name+'</h3><audio controls preload="auto" autoplay> <source src="'+stream_url+'" > Your browser does not support the audio element.</audio>';
+               }
+
+
+
+
+
+              </script>
+
+        </div>
+      </div>
+
+    </section>
       
     
 
-      <!-- Why You Should Listen to OnWave-->
+      <!-- Why You Should Listen to RadioKenya-->
       <section class="section section-lg">
         <div class="container text-center">
           <h2>Radio Kenya Player Streaming Live</h2>
