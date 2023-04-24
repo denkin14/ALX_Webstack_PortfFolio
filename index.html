@@ -59,8 +59,6 @@
 
 </script>
 
-
-
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
@@ -70,7 +68,7 @@
       </div>
     </div>
     <div class="page">
-      <!-- Page Header--><!-- <a class="banner banner-top" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid_02.jpg" alt="" height="0"/></a> -->
+      <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap rd-navbar-absolute">
@@ -82,7 +80,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="" alt="" width="45" height="24"/></a>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo.png" alt="" width="45" height="24"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-main-element">
@@ -118,12 +116,12 @@
       <!-- Swiper-->
       <section class="section swiper-container swiper-slider swiper-slider-2" data-loop="false" data-autoplay="false" data-simulate-touch="false" data-slide-effect="fade">
         <div class="swiper-wrapper">
-          <div class="swiper-slide context-dark" data-slide-bg="images/raise_up.webp">
+          <div class="swiper-slide context-dark" data-slide-bg="images/onair.webp">
             <div class="swiper-slide-caption">
               <div class="container">
                 <div class="row justify-content-lg-left">
                   <div class="col-md-12 col-xl-10">
-                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Stream Live Online Radio.</h1></n> <h1>Free Web Player for Streaming Kenyan Radio</h1><a class="button button-lg button-primary" href="#" data-caption-animate="fadeInUp" data-caption-delay="450"> Mobile App Coming Soon</a>
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><strong>Stream Live Online Radio.</strong></h1></n> <h1>Free Kenya Radio Web Player</h1><a class="button button-lg button-primary" href="#" data-caption-animate="fadeInUp" data-caption-delay="450"> Mobile App Coming Soon</a>
                   </div>
                 </div>
               </div>
@@ -162,10 +160,12 @@
         <div class="container">
           <div class="block-lg text-center">
             <h2>Stream Kenyan Top Radio Stations</h2>
-                  <p><strong>
-                  Get a rich collection of Over 50+ French Radio Shows including Vernacular, Talk Shows, Gospel, News, Music and Sports and Entertainment.
-                   </strong></p>
-                   <p><strong>Click on any Radio Stations to Start Listening to Live Radio</strong></p>
+                  <p>
+                    <strong>Get a rich collection of Over 30+ Kenyan Radio Shows including Vernacular, Talk Shows, Gospel, News, Music and Sports and Entertainment.</strong>
+                  </p>
+                   <p>
+                    <strong>Click on any Radio Stations to Start Listening to Live Radio</strong>
+                  </p>
           </div>
             <div id="radios_container" class="row row-20 justify-content-lg-center">
 
@@ -198,38 +198,30 @@
                           '<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 wow fadeInLeft">'+
                           '<a href="#player_container" class="variety-box-wrapper" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio France" width="128px" height="128px" /><h4 style="margin:10px">'+station_name+'</h4></div></figure></a></div>';
                           
-                          if(doc.data().position == 2)
+                          if(doc.data().active == 1)
                           launchPlayer(firstStation.station_name,firstStation.stream_url,firstStation.img_url);
 
                         }
                       });
                     });
                      
-              
-   
+         
                   //Launches Specific Radio when clicked 
                   function launchPlayer(station_name,stream_url,img_url){
 
                       document.getElementById("player_container").innerHTML='  <img height="128px" width="128px" src="'+img_url+'" style="margin: 10px"> <h3 style="margin: 10px">'+station_name+'</h3><audio controls preload="auto" autoplay> <source src="'+stream_url+'" > Your browser does not support the audio element.</audio>';
                }
-
-
-
-
-
-              </script>
+             </script>
 
         </div>
       </div>
 
     </section>
-      
-    
-
+ 
       <!-- Why You Should Listen to RadioKenya-->
       <section class="section section-lg">
         <div class="container text-center">
-          <h2>Radio Kenya Player Streaming Live</h2>
+          <h2>Radio Kenya WebPlayer Streaming Live</h2>
           <div class="row row-40 justify-content-center number-counter">
             <div class="col-sm-6 col-lg-3 wow fadeInLeft">
               <div class="blurb-icon-fill">
@@ -249,14 +241,14 @@
               <div class="blurb-icon-fill">
                 <div class="icon linearicons-sun"><span class="index-counter"></span></div>
                 <h5 class="title">Available Everywhere</h5>
-                <p class="exeption">You can listen to our radio both online and offline via any devices, gadgets or radios.</p>
+                <p class="exeption">You can listen to Radio online via Mobile Phones and Computer no matter your Geographical location.</p>
               </div>
             </div>
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.3s">
               <div class="blurb-icon-fill">
                 <div class="icon linearicons-medal-empty"><span class="index-counter"></span></div>
                 <h5 class="title">Best DJ Shows</h5>
-                <p class="exeption">we regularly broadcasts shows from Top DJs Worldwide and play exclusive tracks for you.</p>
+                <p class="exeption">Regular broadcasted shows from Top DJs Worldwide Playing exclusive Music and Vibes for you.</p>
               </div>
             </div>
           </div>
@@ -268,8 +260,7 @@
       <footer class="section footer-2">
         <div class="container">
           <div class="row row-40">
-            <div class="col-md-6 col-lg-3"><a class="footer-logo" href="index.html"><img src="#" alt="" width="45" height="27"/></a>
-        
+            <div class="col-md-6 col-lg-3"><a class="footer-logo" href="index.html"><img src="images/logo.png" alt="" width="45" height="27"/></a>
               <p>Radio Kenya WebPlayer allows you to listen up to over 30+ Kenyan Radio Stations While listening to high quality music from anywhere in the world.</p>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -278,18 +269,18 @@
                 <li>
                   <div class="unit unit-horizontal unit-spacing-xxs">
                     <div class="unit-left"><span class="icon mdi mdi-map-marker accent-icon"></span></div>
-                    <div class="unit-body"><a href="http://nodemtech.com">Nairobi <br class="veil reveal-lg-inline">Kenya</a></div>
+                    <div class="unit-body">Nairobi <br class="veil reveal-lg-inline">Kenya</a></div>
                   </div>
                 </li>
                
                 <li>
                   <div class="unit unit-horizontal unit-spacing-xxs">
                     <div class="unit-left"><span class="icon mdi mdi-email-outline accent-icon"></span></div>
-                    <div class="unit-body"><a href="https://nodemtech.com/contact/">info@nodemtech.com</a></div>
+                    <div class="unit-body">info@nodemtech.com</div>
                   </div>
                 </li>
               </ul>
-              <div class="group-md group-middle social-items"><a class="icon icon-md novi-icon mdi mdi-facebook" href="#"></a><a class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a><a class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a></div>
+              <div class="group-md group-middle social-items"><a class="icon icon-md novi-icon mdi mdi-facebook" href="https://www.facebook.com/KenyaRadio/?_rdc=1&_rdr"></a><a class="icon icon-md novi-icon mdi mdi-twitter" href="https://twitter.com/_nodem"></a><a class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a></div>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -347,15 +338,14 @@
                     <div class="unit-body">Radio Simba</div>
                   </div>
                 </li>
-               
-               
+              
               </ul>
      
           </div>
      
           </div>
           <!-- Rights-->
-          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Radio Kenya WebPlayer</span>. All Rights Reserved by Radio Kenya WebPlayer. Designed & Developed by <a href="https://nodemtech.com">Nodem Technologies / ALX PortFolio Project </a> <a class="rd-nav-link" href="privacy.html">Privacy Policy</a> <a class="rd-nav-link" href="dmca.html"> DMCA</a>
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Radio Kenya WebPlayer</span>. All Rights Reserved by Radio Kenya WebPlayer. Designed & Developed by <a href="#"> Dennis Kinyua For ALX PortFolio Project </a> <a class="rd-nav-link" href="privacy.html">Privacy Policy</a> <a class="rd-nav-link" href="dmca.html"> DMCA</a>
           </p>
         </div>
       </footer>
