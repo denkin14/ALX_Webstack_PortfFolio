@@ -1,7 +1,5 @@
-# https---github.com-denkin14-Webstack_PortfFolio
+PortFolio Project Problem Statement
 
-Radio Kenya allows you to listen up to over 30+ Kenyan Radio Stations and listen to high quality music from anywhere in the world.
+Individuals, who are living outside of Kenya, often face difficulties in accessing local Kenyan radio stations through traditional methods such as terrestrial radio or satellite radio. This can be due to geographical barriers, limited signal strength, or other technical issues.
 
-Enables User to Get a rich collection of Over 30+ Kenyan Radio Shows including Vernacular, Talk Shows, Gospel, News, Music and Sports and Entertainment. 
-
-keeping kenyan Radio Listeners closer to home. no matter their geographical distance.
+To address this issue, a radio web player that provides free radio streaming services is necessary. This web player will allow Kenyan people in the diaspora to access their favorite local Kenyan radio stations via the internet, enabling them to stay connected to their culture and stay up-to-date with the latest news, music, and entertainment from their home country. 
